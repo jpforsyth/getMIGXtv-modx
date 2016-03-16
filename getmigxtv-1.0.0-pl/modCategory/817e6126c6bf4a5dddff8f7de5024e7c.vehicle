@@ -1,0 +1,41 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      'a42a1d5615276268977bfe64bd578f3e' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"getMIGXtv","description":"A MODx snippet for retrieving a MIGX TV value as a PHP array from a given resource.","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/*\\n** Package:     getMIGXtv\\n** Version:     1.0.0\\n** Author:      Jim Forsyth (jpforsyth.com)\\n** Copyright:   2016 Jim Forsyth\\n** License:     MIT\\n**\\n** Description:\\n** A MODx snippet for retrieving a MIGX TV value as a PHP array from a given resource.\\n**\\n** Options:\\n** id:          The resource ID (int)\\n** name:        The template variable name (string)\\n** key:         (Optional) The key to sort array by. Defaults to \'MIGX_id\' (string)\\n** placeholder: (Optional) The placeholder name. Defaults to \'migx\' (string)\\n**\\n** Example (inside a snippet):\\n** $modx->runSnippet(\'getMIGXtv\',array(\\n**  \'id\' => 123,\\n**  \'name\' => `MY_MIGX_TV`\\n**  \'key\' => `MIGX_id`,\\n**  \'placeholder\' => `results`\\n** ));\\n** $results = $modx->getPlaceholder(\'results\');\\n**\\n*\\/\\n\\n\\/\\/ Set defaults\\n$id = $id ? $id : $modx->resource->get(\'id\');\\n$placeholder = $placeholder ? $placeholder : \'migx\';\\n\\/\\/ Retrieve MIGX TV\\n$page = $modx->getObject(\'modResource\',$id);\\n$results = json_decode($page->getTVValue($name),true);\\n\\/\\/ Re-key (if applicable)\\nif (!empty($key)) {\\n  foreach($results as $result) {\\n    $idx = $result[$key];\\n    unset($result[$key]);\\n    $data[$idx] = $result;\\n  }\\n  $results = $data;\\n}\\n\\/\\/ Create placeholder\\n$modx->setPlaceholder($name,$results);","locked":0,"properties":null,"moduleguid":"","static":0,"static_file":"","content":"\\/*\\n** Package:     getMIGXtv\\n** Version:     1.0.0\\n** Author:      Jim Forsyth (jpforsyth.com)\\n** Copyright:   2016 Jim Forsyth\\n** License:     MIT\\n**\\n** Description:\\n** A MODx snippet for retrieving a MIGX TV value as a PHP array from a given resource.\\n**\\n** Options:\\n** id:          The resource ID (int)\\n** name:        The template variable name (string)\\n** key:         (Optional) The key to sort array by. Defaults to \'MIGX_id\' (string)\\n** placeholder: (Optional) The placeholder name. Defaults to \'migx\' (string)\\n**\\n** Example (inside a snippet):\\n** $modx->runSnippet(\'getMIGXtv\',array(\\n**  \'id\' => 123,\\n**  \'name\' => `MY_MIGX_TV`\\n**  \'key\' => `MIGX_id`,\\n**  \'placeholder\' => `results`\\n** ));\\n** $results = $modx->getPlaceholder(\'results\');\\n**\\n*\\/\\n\\n\\/\\/ Set defaults\\n$id = $id ? $id : $modx->resource->get(\'id\');\\n$placeholder = $placeholder ? $placeholder : \'migx\';\\n\\/\\/ Retrieve MIGX TV\\n$page = $modx->getObject(\'modResource\',$id);\\n$results = json_decode($page->getTVValue($name),true);\\n\\/\\/ Re-key (if applicable)\\nif (!empty($key)) {\\n  foreach($results as $result) {\\n    $idx = $result[$key];\\n    unset($result[$key]);\\n    $data[$idx] = $result;\\n  }\\n  $results = $data;\\n}\\n\\/\\/ Create placeholder\\n$modx->setPlaceholder($name,$results);"}',
+        'guid' => 'adbc11f7efaee36bf5ee2231947c4823',
+        'native_key' => 1,
+        'signature' => '2e3989b98e170ed4fb52463da6a0acaf',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2371f76912c4de76368bc0cbaede1ba5',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '817e6126c6bf4a5dddff8f7de5024e7c',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"getMIGXtv","rank":0}',
+);

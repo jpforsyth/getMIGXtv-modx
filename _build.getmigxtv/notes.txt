@@ -1,0 +1,12 @@
+Manually change text in these files:
+
+- setup.options.php
+- data/transport.snippets.php
+
+56e8294af05e8b07448c2c41-56e8294af05e8b07448c2c42
+
+Short description
+getMIGXtv is a snippet that takes the value of a MIGX TV and converts it into a PHP array before storing it as a placeholder for use in other snippets/chunks. Arrays can be re-keyed using any available field, e.g. MIGX_id, and placeholders can be given a custom name.
+
+
+Install with Revolution's Package Management. Brief documentation and examples are included in the header of the snippet.
