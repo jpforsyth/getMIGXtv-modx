@@ -1,10 +1,14 @@
 getMIGXtv 1.0.0
 ===============
 
-Version:    1.0.0
-Author:     Jim Forsyth (jpforsyth.com)
-Copyright:  2016 Jim Forsyth
-License:    MIT
+Version:    1.0.0<br />
+Author:     Jim Forsyth (jpforsyth.com)<br />
+Copyright:  2016 Jim Forsyth<br />
+License:    MIT<br />
+
+Installation
+------------
+Install via MODx Package Management (coming soon) or upload getmigxtv-1.0.0-pl.transport.zip and install from local source.
 
 Description
 -----------
